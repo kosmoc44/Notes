@@ -1,0 +1,78 @@
+@use './variables.scss'as *;
+
+.notes-item {
+    background: linear-gradient(0deg, #FFFBFE, #FFFBFE),
+        linear-gradient(0deg, rgba(103, 80, 164, 0.05), rgba(103, 80, 164, 0.05));
+    box-shadow: 0px 1px 3px 1px #00000026;
+    box-shadow: 0px 1px 2px 0px #0000004D;
+    border-radius: 16px;
+    padding: 16px;
+
+    &__top {
+
+        &.grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        margin-bottom: 16px;
+
+        &-title {
+            color: #1C1B1F;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        & span {
+            color: $gray;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+
+    &__txt {
+        color: #49454F;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+            margin-bottom: 17px;
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: end;
+    }
+
+    &__btn {
+        padding: 10px 12px;
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+        border-radius: 5px;
+        transition: 0.3s ease;
+
+
+        & span {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+}
+
+.red {
+    color: $red;
+
+    &:hover {
+        background: $redBg;
+    }
+}
+
+.purple {
+    color: $purple;
+
+    &:hover {
+        background: $purpleBg;
+    }
+}

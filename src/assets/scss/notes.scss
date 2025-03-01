@@ -1,0 +1,50 @@
+@use './variables.scss'as *;
+
+.notes {
+    margin-top: 30px;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-title {
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 28px;
+            color: #323232;
+        }
+
+        &-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 121px;
+            height: 56px;
+            column-gap: 22px;
+            background: linear-gradient(0deg, #FFFBFE, #FFFBFE),
+                linear-gradient(0deg, rgba(103, 80, 164, 0.11), rgba(103, 80, 164, 0.11));
+            box-shadow: 0px 1px 3px 0px #0000004D;
+            box-shadow: 0px 4px 8px 3px #00000026;
+            border-radius: 16px;
+
+            & span {
+                color: $purple;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    &__list {
+        &.active {
+            grid-template-columns: 1fr;
+        }
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 30px;
+    }
+}
