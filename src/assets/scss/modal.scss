@@ -1,0 +1,104 @@
+@use './variables.scss'as *;
+
+.modal {
+    background: rgba(0, 0, 0, 0.35);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__block {
+        background: linear-gradient(0deg, #FFFBFE, #FFFBFE),
+            linear-gradient(0deg, rgba(103, 80, 164, 0.05), rgba(103, 80, 164, 0.05));
+        border-radius: 28px;
+        padding: 24px;
+        width: 312px;
+
+        &-title {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 20px;
+        }
+
+        &-inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 24px;
+
+            & label {
+                position: relative;
+
+                & input {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: start;
+                    padding: 23px 16px 9px 16px;
+                    width: 100%;
+                    background: #E7E0EC;
+                    border-radius: 4px 4px 0px 0px;
+                    border-bottom: 1px solid #49454F;
+                    color: #49454F;
+                    font-size: 13px;
+                    font-weight: 400;
+
+                    &:focus~span {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateY(-27px);
+
+                    }
+
+                    &::placeholder {
+                        font-family: Roboto;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 16px;
+                    }
+                }
+
+                & span {
+                    position: absolute;
+                    top: 8px;
+                    left: 15px;
+                    color: $purple;
+                    font-family: Roboto;
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 16px;
+                    transition: 0.3s ease;
+                    opacity: 0;
+                }
+            }
+        }
+
+        &-btns {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            column-gap: 8px;
+        }
+
+        &-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 3px;
+            text-transform: uppercase;
+            opacity: 0.8;
+            transition: 0.3s ease;
+
+            &:hover {
+                opacity: 1;
+                background: none;
+            }
+        }
+    }
+}

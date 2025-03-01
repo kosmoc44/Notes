@@ -3,12 +3,17 @@
 @use './header.scss';
 @use './notes.scss';
 @use './notesItem.scss';
+@use './modal.scss';
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Roboto';
+}
+
+body {
+    margin-bottom: 50px;
 }
 
 a {
