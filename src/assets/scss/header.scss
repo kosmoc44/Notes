@@ -24,4 +24,23 @@
             color: #1C1B1F;
         }
     }
+
+    &__search {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-input {
+            width: 80%;
+            background-color: #FFFFFF;
+            padding: 10px 30px 10px;
+            border-radius: 10px;
+
+
+            &::placeholder {
+                font-size: 16px;
+            }
+        }
+
+    }
 }

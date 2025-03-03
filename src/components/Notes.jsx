@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import {  useState } from 'react'
 import { FcGrid, FcTodoList } from "react-icons/fc"
 
 import NotesItem from "./NotesItem"
 import clsx from "clsx"
 
-const Notes = ({ notes }) => {
+const Notes = ({ notes, searchValue }) => {
 
     const [view, setView] = useState(true)
 
@@ -18,7 +18,7 @@ const Notes = ({ notes }) => {
             <div className="container">
                 <div className="notes__top">
                     <h2 className="notes__top-title">
-                        Все заметки
+                        {notes.length ? "Все заметки" : "Заметок нет"}
                     </h2>
                     <button
                         className="notes__top-btn"
@@ -36,6 +36,7 @@ const Notes = ({ notes }) => {
                             key={note.id}
                             note={note}
                             view={view}
+                            searchValue={searchValue}
                         />
                     ))}
                 </div>
